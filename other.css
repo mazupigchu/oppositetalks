@@ -1,0 +1,210 @@
+@font-face {
+    font-family: Osmose;
+    src: url(../Osmose-UltraLight.otf);
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: black;
+    padding: 0;
+    margin: 0;
+    padding-top: 120px;
+}
+
+.container {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.in-header {
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+    width: 1440px;
+    top: 0;
+    left: 0;
+    background: black;
+    right: 0;
+    align-items: center;
+    border-bottom: 1.5px solid #8A81DE;
+    box-sizing: border-box;
+    position: fixed;
+    margin: 0 auto;
+}
+
+.header-l {
+    font-family: Osmose;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    margin-left: 60px;
+}
+a.available:hover {
+    text-decoration: underline;
+  }
+
+.header-r>a:first-child {
+    width: 22px;
+    height: 22px;
+    background: #E3432D;
+    border-radius: 60px;
+}
+
+.header-r>a:first-child~a {
+    font-family: Osmose;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 42px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    margin-left: 60px;
+}
+
+.header-r {
+    display: flex;
+    align-items: center;
+    padding-right: 60px;
+}
+
+.in-content {
+    padding-left: 352px;
+    padding-top: 80px;
+    width: 1088px;
+    margin: 0 auto;
+    margin-bottom: 200px;
+}
+
+.in-content li:first-child {
+    color: #E3432D;
+}
+
+.in-content li,
+.in-content li a {
+    font-family: Osmose;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.in-content ul {
+    padding: 0;
+    margin: 0 0 60px;
+}
+
+.in-wrapper {
+    display: flex;
+    height: 786px;
+}
+
+.in-wrapper>div:first-child {
+    width: 622px;
+    border-right: 1.5px solid #8A81DE;
+}
+
+.in-wrapper>div:last-child {
+    width: 818px;
+}
+
+.in-wrapper>div {
+    padding-top: 295px;
+    text-align: center;
+}
+
+.title {
+    font-family: Osmose;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #E3432D;
+}
+
+.text {
+    width: 518px;
+    height: 132px;
+    font-family: Osmose;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 55px;
+    line-height: 66px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0 auto;
+}
+
+.button>div {
+    width: 213px;
+    height: 35px;
+    font-family: Osmose;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 35px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0 auto;
+}
+
+button {
+    border: 0;
+    background-color: transparent;
+    width: 153px;
+    height: 35px;
+    font-family: Osmose;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    text-align: center;
+    color: #FFFFFF;
+    border: 1px solid #8A81DE;
+    margin-top: 14px;
+}
+
+.button {
+    margin-top: 45px;
+}
+
+.hint {
+    opacity: 0;
+    transition: all .2s;
+}
+.current{
+    text-decoration: underline;
+    color: #E3432D;
+}
+
+.text-about {
+    width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    font-family: Osmose;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+    color: #FFFFFF;
+    margin-top: 80px;
+    margin-bottom: 200px;
+}
+p{
+    text-align: justify;
+    display: block;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}

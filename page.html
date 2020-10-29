@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opposite talks</title>
+</head>
+<link rel="stylesheet" href="./other.css">
+
+<body>
+    <div class="container in-header">
+        <div class="header-l">opposite talks</div>
+        <div class="header-r">
+            <a href="./index.html"></a>
+            <a href="./catalog.html"class="available">a-z</a>
+            <a href="./about.html"class="available">about</a>
+        </div>
+    </div>
+    <div class="container in-wrapper">
+        <div>
+            <div class="title">when they say</div>
+            <div class="text">i don’t care</div>
+        </div>
+        <div>
+            <div class="title">they might mean</div>
+            <div class="text">i’m too lazy to think of an answer</div>
+            <div class="button">
+                <div class="hint">opps this is the only answer</div>
+                <button onClick="randomSelect()">click to change</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+<!-- The part below were made possible by the help and advice of @mwei  -->
+<script>
+    var globalObj = {
+        "a few minutes": ["hours and hours of waiting", "i am still in bed", "i just started 5 minutes ago", "i still need an hour to get ready"],
+        "do what you want": ["do the opposite", "i couldn’t care less", "don’t do"],
+        "do you have plans": ["you better take me out somewhere", "let’s hang"],
+        "go ahead": ["this is not a permission"],
+        "i don’t care": ["i do care a lot", "i am too lazy to think of an answer", "you are about to be wrong", "i don’t like you", "simply not caring "],
+        "i hate you": ["i truly wish you were dead", "i actually like you"],
+        "i’m fine": ["generic response to a generic question", "something to be very worried about", "no get lost", "i want to know if you really care", "possibly really pissed at you", "give me more attention "],
+        "i’m not mad": ["i am definitely mad at you", "i am not mad at you.", "don’t you dare do this again", "i’m mad but you have to figure it out"],
+        "i’m over it": ["i don’t care anymore", "by no means am I over it", "stfu"],
+        "leave me alone": ["get lost", "don’t go i want attention", "it means exactly what it says", "i’m very upset with you", "i need space"],
+        "(loud sigh)": ["to get other people to notice you are upset"],
+        "maybe": ["yes", "no", "keep you guessing yes or no but the answer is no"],
+        "no": ["no", "yes", "answer to all life’s problems", "just no"],
+        "nothing": ["something"],
+        "no worries": ["that is fine", "with no emojis then slightly annoyed"],
+        "nvm forget it": ["i’m mad and you’re f**cked"],
+        "stop it": ["an alert to keep the compliments coming", "what’s wrong with you", "no"],
+        "tolerable but not enough": ["i don’t wanna admit that i like you"],
+        "wyd": ["let’s hang", "i miss you"],
+        "you are an idiot": ["you are really stupid", "i love you"]
+    }
+    var titleName = localStorage.getItem('TITLE_NAME')
+    var textElements = document.getElementsByClassName('text')
+    textElements[0].innerText = titleName
+    textElements[1].innerText = globalObj[titleName][0]
+
+    var index = 0
+    var timer1 = null
+
+    function randomSelect() {
+        clearInterval(timer1)
+        if (globalObj[titleName] && globalObj[titleName].length == 1) {
+            document.querySelector('.hint').style.opacity = 1
+            timer()
+            return
+        }
+        var len = globalObj[titleName].length - 1
+        var num = parseInt(Math.random() * len, 10) + 1
+        console.log(num)
+        if (index == num) {
+            textElements[1].innerText = globalObj[titleName][0]
+            index = 0
+        } else {
+            textElements[1].innerText = globalObj[titleName][num]
+            index = num
+        }
+    }
+
+    function timer() {
+        setTimeout(() => {
+            document.querySelector('.hint').style.opacity = 0
+        }, 2000);
+    }
+</script>
+
+</html>

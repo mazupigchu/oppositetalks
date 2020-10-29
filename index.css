@@ -1,0 +1,396 @@
+@font-face {
+    font-family: Osmose;
+    src: url(../Osmose-UltraLight.otf);
+}
+
+body {
+    background: black;
+    padding: 0;
+    margin: 0;
+}
+
+.in-header {
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+    width: 1440px;
+    top: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    box-sizing: border-box;
+    /* position: fixed; */
+    margin: 0 auto;
+    background: black;
+    z-index: 9999999;
+}
+
+.header-l {
+    font-family: Osmose;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 45px;
+    line-height: 52px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    margin-left: 60px;
+}
+a.available:hover {
+    text-decoration: underline;
+  }
+.container {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.header-r {
+    display: flex;
+    padding-right: 60px;
+}
+
+.header-r a {
+    font-family: Osmose;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 42px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    text-decoration: none
+}
+
+.header-r a:nth-child(2) {
+    margin-left: 60px;
+}
+
+
+/* in-content */
+
+.in-content {
+    border: 1.5px solid #8A81DE;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.content-top,
+.content-bottom {
+    width: 195px;
+    height: 60px;
+    font-family: Osmose;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    margin: 0 auto;
+    border-left: 1.5px solid #8A81DE;
+    border-right: 1.5px solid #8A81DE;
+}
+
+.content-top::after {
+    content: "";
+    position: absolute;
+    width: 87.68px;
+    height: 1px;
+    left: -14px;
+    background: #8A81DE;
+    transform: rotate(45deg);
+}
+
+.content-top::before {
+    content: "";
+    position: absolute;
+    width: 87.68px;
+    height: 1px;
+    right: -14px;
+    background: #8A81DE;
+    transform: rotate(-45deg);
+}
+
+.content-bottom::after {
+    content: "";
+    position: absolute;
+    width: 87.68px;
+    height: 1px;
+    left: -14px;
+    bottom: 30px;
+    background: #8A81DE;
+    transform: rotate(-45deg);
+}
+
+.content-bottom::before {
+    content: "";
+    position: absolute;
+    width: 87.68px;
+    height: 1px;
+    right: -14px;
+    bottom: 30px;
+    background: #8A81DE;
+    transform: rotate(45deg);
+}
+
+.content-box-r,
+.content-box-l {
+    width: 248px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    font-family: Osmose;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    border-left: 1.5px solid #8A81DE;
+    border-right: 1.5px solid #8A81DE;
+}
+
+.content-box-l {
+    left: -96px;
+    transform: rotate(-90deg);
+}
+
+.content-box-r {
+    right: -96px;
+    transform: rotate(90deg);
+}
+
+.content-box-c {
+    position: relative;
+    height: 660px;
+    border: 1.5px solid #8A81DE;
+    margin: 0 60px;
+}
+
+.content-box-after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1.5px;
+    background: #8A81DE;
+}
+
+.content-box-before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1.5px;
+    background: #8A81DE;
+}
+
+.big-arc {
+    width: 80px;
+    height: 80px;
+    background: #E3432D;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.middle-arc {
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    background: #E3432D;
+    border-radius: 50%;
+}
+
+.small-arc {
+    margin: 0 auto;
+    width: 30px;
+    height: 30px;
+    background: #E3432D;
+    border-radius: 50%;
+}
+
+.no-text,
+.nothing-text,
+.leavemealone-text,
+.nvmforgetit-text,
+.sigh-text,
+.wyd-text,
+.maybe-text,
+.noworries-text,
+.imoverit-text,
+.idontcare-text,
+.dowhatyouwant-text,
+.didyoumakeplans-text,
+.goahead-text,
+.tolorblebutnotenough-text,
+.youareanidiot-text,
+.imfine-text,
+.imnotmad-text,
+.fewminutes-text,
+.ihateyou-text,
+.stopit-text {
+    position: absolute;
+    z-index: 11;
+    text-decoration: none;
+    display: flex;
+    flex-flow: column;
+}
+
+.no-text>div,
+.nothing-text>div,
+.leavemealone-text>div,
+.wyd-text>div,
+.noworries-text>div,
+.imnotmad-text>div,
+.sigh-text>div,
+.maybe-text>div,
+.idontcare-text>div,
+.imfine-text>div,
+.tolorblebutnotenough-text>div,
+.imoverit-text>div,
+.youareanidiot-text>div,
+.dowhatyouwant-text>div,
+.nvmforgetit-text>div,
+.ihateyou-text>div,
+.fewminutes-text>div,
+.goahead-text>div,
+.didyoumakeplans-text>div,
+.stopit-text>div {
+    font-family: Osmose;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.no-text {
+    left: 62px;
+    top: 175px;
+}
+
+.stopit-text {
+    left: 161px;
+    top: 276px;
+}
+
+.nothing-text {
+    left: 190px;
+    top: 59px;
+}
+
+.leavemealone-text {
+    left: 283px;
+    top: 192px;
+}
+
+.sigh-text {
+    left: 489px;
+    top: 64px;
+}
+
+.wyd-text {
+    left: 640px;
+    top: 208px;
+    background: black;
+    z-index: 11;
+}
+
+
+/* t-r */
+
+.noworries-text {
+    top: 64px;
+    left: 804px;
+}
+
+.maybe-text {
+    top: 239px;
+    left: 800px;
+}
+
+.imoverit-text {
+    top: 228px;
+    left: 1126px;
+}
+
+.idontcare-text {
+    top: 149px;
+    left: 929px;
+}
+
+.imfine-text {
+    top: 56px;
+    left: 1163px;
+}
+
+
+/* b-l */
+
+.ihateyou-text {
+    top: 488px;
+    left: 125px;
+}
+
+.tolorblebutnotenough-text {
+    left: 325px;
+    top: 522px;
+}
+
+.youareanidiot-text {
+    left: 382px;
+    top: 373px;
+}
+
+.didyoumakeplans-text {
+    left: 581px;
+    top: 436px;
+    background: black;
+    z-index: 11;
+}
+
+
+/* b-r */
+
+.dowhatyouwant-text {
+    left: 820px;
+    top: 381px;
+}
+
+.nvmforgetit-text {
+    left: 786px;
+    top: 535px;
+}
+
+.goahead-text {
+    top: 502px;
+    left: 1001px;
+}
+
+.imnotmad-text {
+    top: 502px;
+    left: 1174px;
+}
+
+.fewminutes-text {
+    left: 1064px;
+    top: 381px;
+}
+
+.cotent-box-d {
+    position: absolute;
+    left: 1px;
+    right: 1px;
+    top: 1px;
+    bottom: 1px;
+    background: rgba(0, 0, 0, 0);
+    z-index: -1;
+    transition: all .2s;
+}

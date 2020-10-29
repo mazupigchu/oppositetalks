@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opposite talks</title>
+</head>
+<link rel="stylesheet" href="./other.css">
+
+<body>
+    <div class="container in-header">
+        <div class="header-l">opposite talks</div>
+        <div class="header-r">
+            <a href="./index.html"></a>
+            <a class="current">a-z</a>
+            <a href="./about.html" class="available">about</a>
+        </div>
+    </div>
+    <div class="in-content">
+        <ul>
+            <li>a</li>
+            <li><a href="">a few minutes</a></li>
+        </ul>
+        <ul>
+            <li>d</li>
+            <li><a href="">do what you want</a></li>
+            <li><a href="">do you have plans</a></li>
+        </ul>
+        <ul>
+            <li>g</li>
+            <li><a href="">go ahead</a></li>
+        </ul>
+        <ul>
+            <li>i</li>
+            <li><a href="">i don’t care</a></li>
+            <li><a href="">i hate you</a></li>
+            <li><a href="">i’m fine</a></li>
+            <li><a href="">i’m not mad</a></li>
+            <li><a href="">i’m over it</a></li>
+        </ul>
+        <ul>
+            <li>l</li>
+            <li><a href="">leave me alone</a></li>
+        </ul>
+        <ul>
+            <li>m</li>
+            <li><a href="">maybe</a></li>
+        </ul>
+        <ul>
+            <li>n</li>
+            <li><a href="">no</a></li>
+            <li><a href="">nothing</a></li>
+            <li><a href="">no worries</a></li>
+            <li><a href="">nvm forget it</a></li>
+        </ul>
+        <ul>
+            <li>s</li>
+            <li><a href="">(loud sigh)</a></li>
+            <li><a href="">stop it</a></li>
+        </ul>
+        <ul>
+            <li>t</li>
+            <li><a href="">tolerable but not enough</a></li>
+        </ul>
+        <ul>
+            <li>w</li>
+            <li><a href="">wyd</a></li>
+        </ul>
+        <ul>
+            <li>y</li>
+            <li><a href="">you are an idiot</a></li>
+        </ul>
+    </div>
+</body>
+<!-- The part below were made possible by the help and advice of @mwei  -->
+<script>
+    const aElement = document.querySelectorAll('li > a')
+    aElement.forEach(p => {
+        p.addEventListener('click', function(e) {
+            e.preventDefault()
+            localStorage.setItem('TITLE_NAME', e.target.innerText)
+            window.location = './page.html'
+        })
+    })
+</script>
+
+</html>
